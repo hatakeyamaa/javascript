@@ -1,0 +1,40 @@
+<!-- var vel = 60.5
+console.log(`A velocidade do seu carro é ${vel}Km/h`)
+if (vel > 60) { // condição simples!
+    console.log('Você ultrapassou a velocidade permitida, MULTADO!')
+}
+console.log('Dirija usando sempre cinto de segurança!') -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite seu país: <input type="text" name="país" id="país">
+    <button>Descubra!</button>
+    <div class="res"></div>
+
+    <script>
+        var botao = document.querySelector('button')
+        botao.addEventListener('click', descobrir)
+       
+
+        function descobrir() {
+            var país = document.querySelector('input#país')
+            var nacionalidade = String(país.value)
+            var res = document.querySelector('div.res')
+            res.innerHTML = `<p>Você é do(a) <strong>${nacionalidade}</strong></p>`
+            if (nacionalidade == 'Brasil') {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else { 
+                res.innerHTML += `<p>Você é <strong>Estrangeiro(a)</strong>!</p>`
+        }
+        }
+    </script>
+</body>
+</html>
