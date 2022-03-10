@@ -29,8 +29,8 @@ console.log('Dirija usando sempre cinto de segurança!') -->
             var nacionalidade = String(país.value)
             var res = document.querySelector('div.res')
             res.innerHTML = `<p>Você é do(a) <strong>${nacionalidade}</strong></p>`
-            if (nacionalidade == 'Brasil') {
-                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            if (nacionalidade == 'Brasil' || nacionalidade == 'brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong>!</p>`
             } else { 
                 res.innerHTML += `<p>Você é <strong>Estrangeiro(a)</strong>!</p>`
         }
