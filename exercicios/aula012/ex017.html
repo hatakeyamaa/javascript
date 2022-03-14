@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias da Semana</title>
+</head>
+<body>
+    <h1>Que dia é hoje?</h1>
+    <div class="hoje"></div>
+
+    <script>
+        var agora = new Date()
+        var diasem = agora.getDay()
+        var hoje = document.querySelector('div.hoje')
+        var fundo = document.querySelector('body')
+
+        switch (diasem) {
+            case 0:
+            hoje.innerHTML = ('Hoje é Domingo!')
+            fundo.style.background = 'yellow'
+            break
+
+            case 1:
+            hoje.innerHTML = ('Hoje é Segunda!')
+            fundo.style.background = 'grey'
+            break
+
+            case 2:
+            hoje.innerHTML = ('Hoje é Terça!')
+            fundo.style.background = 'blue'
+            break
+
+            case 3:
+            hoje.innerHTML = ('Hoje é Quarta!')
+            fundo.style.background = 'lightblue'
+            break
+
+            case 4:
+            hoje.innerHTML = ('Hoje é Quinta!')
+            fundo.style.background = 'puple'
+            break
+
+            case 5:
+            hoje.innerHTML = ('Hoje é Sexta!')
+            fundo.style.background = 'red'
+            break
+
+            case 6:
+            hoje.innerHTML = ('Hoje é Sábado!')
+            fundo.style.background = 'pink'
+            break
+
+        }
+    </script>
+</body>
+</html>

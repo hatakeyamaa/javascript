@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora</title>
+</head>
+<body>
+    <h1>Horário</h1>
+    <div class="horário"></div>
+    <p class="recepção"></p>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var horário = document.querySelector('div.horário')
+        var rec = document.querySelector('p.recepção')
+        var fundo = document.querySelector('body')
+        horário.innerHTML = `Agora são ${hora} hora(s)`
+
+        if (hora < 12 && hora >= 6) {
+            rec.innerHTML = '<p>Bom dia!</p>'
+            fundo.style.background = 'yellow'
+        } else if (hora > 12 && hora <= 18) {
+            rec.innerHTML = '<p>Boa tarde!</p>'
+            fundo.style.background = 'yellow'
+        } else if (hora > 18 && hora > 0) {
+            rec.innerHTML = 'Boa noite!'
+            fundo.style.background = 'purple'
+            fundo.style.color = 'white'
+        } else {
+            rec.innerHTML = 'Boa madrugada!'
+            fundo.style.background = 'grey'
+            fundo.style.color = 'white'
+        }
+    </script>
+</body>
+</html>

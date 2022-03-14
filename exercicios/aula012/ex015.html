@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Idades para votar</h1>
+    <input type="text" placeholder="Digite sua idade" class="idade">
+    <button>Verificar</button>
+    <div id="res"></div>
+
+    <script>
+        var b = document.querySelector('button')
+
+        b.addEventListener('click', botao)
+
+        function botao() {
+            var texto = document.querySelector('input')
+            var idade = Number(texto.value)
+            var res = document.querySelector('div#res')
+
+            if (idade < 16) {
+                res.innerHTML = '<p>não vota</p>'
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML = '<p>voto opcional</p>'
+            } else {
+                res.innerHTML = '<p>voto obrigatório</p>'
+            }
+        }
+    </script>
+</body>
+</html>
