@@ -1,10 +1,10 @@
 var ini = 1 // numero inicial
 var fim = 10 // numero final
-var passos = 2 // passos
-var res = '' // resultado
+var passos = 3 // passos
+//var res = fim // resultado
 
 
-while (ini < fim) {
-    console.log(res)
-    passos++
+while (ini <= fim) {
+    console.log(ini)
+    ini+=passos
 }
