@@ -1,0 +1,7 @@
+var n = 2
+//var f = 10
+var p = 1
+
+for (n > 0; n >= p; n*=p) {
+    console.log(n)
+}

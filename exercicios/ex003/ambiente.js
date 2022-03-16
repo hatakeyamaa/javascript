@@ -4,7 +4,6 @@ var passos = 3 // passos
 //var res = fim // resultado
 
 
-while (ini <= fim) {
+for (ini >= 0; ini <= fim; ini+=passos) {
     console.log(ini)
-    ini+=passos
 }
