@@ -1,7 +1,12 @@
-function numero(n) {
-    let num = 1
-    for(let n_adc = num; n_adc <= 100; n_adc = num)
-    return n_adc
+/*
+function generateRange(n) {
+    let range = [1 < 100];
+    for (let i = 0; i < 100; i++) range[i] = i + 1;
+    return range;
 }
+console.log(generateRange(1));
+*/
 
-console.log(numero(1))
+let num = [1 <= 100]
+num.sort()
+console.log(num)
