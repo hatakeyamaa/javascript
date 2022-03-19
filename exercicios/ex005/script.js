@@ -6,13 +6,16 @@ function adc() {
         window.alert('Digite um número entre 1 e 100')
     } else {
         let n = Number(num.value)
-        let numero = [n]
-        
-        if(n == 1 <= 100) {
+        numero = new Array(n)
+
+        if(numero.indexOf(n) === -1) {
+            numero.push(n)
             let item = document.createElement('option')
             item.text = `O número ${n} foi adicionado`
             item.value = `res ${n}`
             res.appendChild(item)
+        } else if (numero.indexOf(n) > -1) { 
+            item.text = `O número já existe`
         }
 /*
         if(n <= 100) {let item = document.createElement('option')
@@ -25,11 +28,3 @@ function adc() {
     }
 }
 
-/*
-for(let n_adc = n; n_adc <= 100; n_adc = n) {
-    let item = document.createElement('option')
-    item.text = `O número ${n_adc} foi adicionado`
-    item.value = `res ${n_adc}`
-    res.appendChild(item)
-}
-*/
