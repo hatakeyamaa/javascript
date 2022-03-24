@@ -1,38 +1,72 @@
 let numero = document.querySelector('input#numtxt')
-let res = document.querySelector('select#res1')
-let res2 = document.querySelector('div#res2')
+let lista = document.querySelector('select#res1')
+let res = document.querySelector('div#res2')
+let num = []
 
+function isNum(n) {
+    if(Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
 
-let n = Number(numero.value)
-let num = [1, 2, 3, 4]
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
 
 function adc() {
+    if(isNum(numero.value) && !inLista(numero.value, num)) {
+        window.alert('Tudo ok')
+    } else {
+        window.alert('Valor inválido ou já encontrado')
+    }
+  
 
 
+
+
+
+    
+    /*
         if(numero.value.length == 0 || numero.value == 0) {
         window.alert('Digite um número entre 1 e 100')
         }
         if (num.indexOf(n) === -1) {
             num.push(n);
             let item = document.createElement('option')
-            res.appendChild(item)
+            lista.appendChild(item)
             item.text = `O número ${n} foi adicionado`
         } else if (num.indexOf(n)) {
             window.alert(`O número já existe`)  
         }
+        */
 }   
 
+/*
 function finalizar() {
-    soma = 0
+    let soma = 0
     for(let s = 0; s < num.length; s++) {
         soma += num[s]
     }
 
-    if(let maior = ) {
+    let posicao_maior = num
+    let posicao_menor = num
 
+    for(let i = 0; i < num; i++) {
+        if(num[i] > num[posicao_maior]){
+            posicao_maior = i
+        } else if(num[i] < num[posicao_menor]){
+            posicao_menor = i
+        }
     }
+
     res2.innerHTML = `<p>Ao todo temos ${num.length} números cadastrados</p> 
-    <p>O maior valor informado foi</p> 
+    <p>O maior valor informado foi ${posicao_maior}</p> 
     <p>O menor valor informado foi </p> 
     <p>Somando todos os valores, temos ${soma}</p> 
     <p>A média dos valores digitados é </p>`
