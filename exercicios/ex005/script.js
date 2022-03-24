@@ -21,31 +21,39 @@ function inLista(n, l) {
 
 function adc() {
     if(isNum(numero.value) && !inLista(numero.value, num)) {
-        window.alert('Tudo ok')
+        num.push(Number(numero.value))
+        let item = document.createElement('option')
+        item.text = `O número ${numero.value} foi adicionado.`
+        lista.appendChild(item)
     } else {
         window.alert('Valor inválido ou já encontrado')
     }
-  
+        item.innerHTML = ''
+} 
 
+function final() {
+    let soma = 0
+    for(let s = 0; s < num.length; s++) {
+        soma += num[s]
+    }
 
+    let maior_valor = 0
+    let menor_valor = 0
 
-
-
-    
-    /*
-        if(numero.value.length == 0 || numero.value == 0) {
-        window.alert('Digite um número entre 1 e 100')
+    for(i = 0; i < num; i++) {
+        if(num[i] > maior_valor) {
+            maior_valor = i
+        } else if(num[i] < num[posicao_menor]) {
+            menor_valor = i
         }
-        if (num.indexOf(n) === -1) {
-            num.push(n);
-            let item = document.createElement('option')
-            lista.appendChild(item)
-            item.text = `O número ${n} foi adicionado`
-        } else if (num.indexOf(n)) {
-            window.alert(`O número já existe`)  
-        }
-        */
-}   
+    }
+
+    res.innerHTML = `<p>Ao todo temos ${num.length} números cadastrados</p>
+    <p>O maior valor informado foi ${maior_valor}</p>
+    <p>O menor valor informado foi ${menor_valor}</p>
+    <p>Somando todos os valores, temos ${soma}</p>
+    <p>A média dos valores digitados é</p>`
+}
 
 /*
 function finalizar() {
