@@ -25,34 +25,45 @@ function adc() {
         let item = document.createElement('option')
         item.text = `O número ${numero.value} foi adicionado.`
         lista.appendChild(item)
+        res.innerHTML = ''
     } else {
         window.alert('Valor inválido ou já encontrado')
     }
-        item.innerHTML = ''
+        numero.value = ''
+        numero.focus()
 } 
 
 function final() {
+    if (num.length == 0) {
+        window.alert(`Digite um valor no campo acima.`)
+    } else {
+    total = num.length
+
     let soma = 0
     for(let s = 0; s < num.length; s++) {
         soma += num[s]
     }
 
-    let maior_valor = 0
-    let menor_valor = 0
+    let maior_valor = num[0]
+    let menor_valor = num[0]
 
-    for(i = 0; i < num; i++) {
+    for(let i in num) {
         if(num[i] > maior_valor) {
-            maior_valor = i
-        } else if(num[i] < num[posicao_menor]) {
-            menor_valor = i
+            maior_valor = num[i]
+        } else if(num[i] < menor_valor) {
+            menor_valor = num[i]
         }
     }
 
-    res.innerHTML = `<p>Ao todo temos ${num.length} números cadastrados</p>
-    <p>O maior valor informado foi ${maior_valor}</p>
-    <p>O menor valor informado foi ${menor_valor}</p>
-    <p>Somando todos os valores, temos ${soma}</p>
-    <p>A média dos valores digitados é</p>`
+    let media = 0
+    media = soma / total
+
+    res.innerHTML = `<p>Ao todo temos ${total} números cadastrados</p>`
+    res.innerHTML += `<p>O maior valor informado foi ${maior_valor}</p>`
+    res.innerHTML += `<p>O menor valor informado foi ${menor_valor}</p>`
+    res.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
+    res.innerHTML += `<p>A média dos valores digitados é ${media}.</p>`
+    }
 }
 
 /*
