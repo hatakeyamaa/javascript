@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+button#b1 {
+    padding: 15px;
+    cursor: pointer;
+}
+
+button#b2 {
+    padding: 15px;
+    cursor: pointer;
+}
+
+button#b3 {
+    padding: 15px;
+    cursor: pointer;
+}
