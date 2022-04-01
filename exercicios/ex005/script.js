@@ -66,32 +66,6 @@ function final() {
     }
 }
 
-/*
-function finalizar() {
-    let soma = 0
-    for(let s = 0; s < num.length; s++) {
-        soma += num[s]
-    }
-
-    let posicao_maior = num
-    let posicao_menor = num
-
-    for(let i = 0; i < num; i++) {
-        if(num[i] > num[posicao_maior]){
-            posicao_maior = i
-        } else if(num[i] < num[posicao_menor]){
-            posicao_menor = i
-        }
-    }
-
-    res2.innerHTML = `<p>Ao todo temos ${num.length} números cadastrados</p> 
-    <p>O maior valor informado foi ${posicao_maior}</p> 
-    <p>O menor valor informado foi </p> 
-    <p>Somando todos os valores, temos ${soma}</p> 
-    <p>A média dos valores digitados é </p>`
-}
-
-
 
 
     
