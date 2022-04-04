@@ -13,7 +13,7 @@ function botao() {
     res.innerHTML = `<p>Resolvendo Bhaskara</p>`
     res.innerHTML += `<p>A equação atual é ${eq}</p>`
     res.innerHTML += `<p>O cálculo realizado será &Lambda; = ${delta}</p>`
-    res.innerHTML += `<p>O valor calculado foi x1 = ${x1} e x2 = ${x2}</p>`
+    res.innerHTML += `<p>O valor calculado foi <mark>x1 = ${x1} e x2 = ${x2}</mark></p>`
 
     /*
     if(x1 > 0 && x2 < 0) {

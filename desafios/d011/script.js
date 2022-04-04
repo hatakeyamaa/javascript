@@ -1,16 +1,16 @@
-let res = document.querySelector('div#res');
+let res = document.querySelector('div#res')
 
 function botao() {
-    let ano = Number(window.prompt(`Qual é o ano que você quer verificar?`));
-    let bis = res.innerHTML = 'É bissexto';
-    let n_bis = res.innerHTTML = 'Não é bissexto';
+    let ano = Number(window.prompt(`Qual é o ano que você quer verificar?`))
+    let bis = res.innerHTML = '<div id="bis">É BISSEXTO</div>&#x2714&#xFE0F'
+    let n_bis = res.innerHTTML = `<div id="n_bis">NÃO É BISSEXTO</div>&#x274C`
 
-    res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`;
+    res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`
     
     if(anobi(ano)) {
-        res.innerHTML += `O ano de ${ano} ${bis}`;
+        res.innerHTML += `O ano de ${ano} ${bis}`
     } else {
-        res.innerHTML += `O ano de ${ano} ${n_bis}`;
+        res.innerHTML += `O ano de ${ano} ${n_bis}`
     }
 
 
@@ -20,8 +20,8 @@ function botao() {
 
 function anobi(a) {
        if ((a % 100 === 0 && a % 400 === 0) || (a % 100 && a % 4 === 0)) {
-           return true;
+           return true
        } else {
-           return false;
+           return false
        }
     }
