@@ -8,20 +8,18 @@ function botao() {
     res.innerHTML = `<h2>Analisando o ano de ${ano}...</h2>`;
     
     if(anobi(ano)) {
-        res.innerHTML = `O ano de ${ano} ${bis}`;
+        res.innerHTML += `O ano de ${ano} ${bis}`;
     } else {
-        res.innerHTML = `O ano de ${ano} ${n_bis}`;
+        res.innerHTML += `O ano de ${ano} ${n_bis}`;
     }
+
 
     //multiplo de 400
     
 }
 
 function anobi(a) {
-    //let multiplo = 0;
-    //for(let a = 0; a <= ano; a++) {
        if ((a % 100 === 0 && a % 400 === 0) || (a % 100 && a % 4 === 0)) {
-           //multiplo += a;
            return true;
        } else {
            return false;
